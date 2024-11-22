@@ -1,0 +1,90 @@
+/* Estilos generales del navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    border-bottom: 1px solid #e0e0e0;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* ::ng-deep .mat-mdc-form-field-subscript-wrapper {
+    display: none !important;
+  }
+  
+  ::ng-deep .mat-mdc-form-field-bottom-align {
+    display: none !important;
+  } */
+
+.mat-mdc-form-field-subscript-wrapper {
+    display: none !important;
+}
+
+.mat-mdc-form-field-bottom-align {
+    display: none !important;
+}
+
+
+/* Logotipo */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    height: 65px;
+    margin-right: 10px;
+}
+
+.logo-text {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff0054;
+    /* Color rojo de PedidosYa */
+}
+
+/* Contenedor de la búsqueda */
+.search-container {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    max-width: 600px;
+    gap: 10px;
+}
+
+.search-field {
+    flex: 1;
+    /* La barra de búsqueda ocupa el máximo espacio disponible */
+}
+
+.search-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4CAF50  !important;
+    /* Color rojo del botón */
+    color: white !important;
+}
+
+.search-button mat-icon {
+    font-size: 20px;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .search-container {
+        width: 100%;
+        gap: 5px;
+    }
+
+    .search-field {
+        width: 100%;
+    }
+}
