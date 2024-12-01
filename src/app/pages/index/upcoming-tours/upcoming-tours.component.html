@@ -1,0 +1,22 @@
+<div class="carousel-container">
+    <!-- Botón izquierdo -->
+    <button class="scroll-button left" (click)="scroll('leftTour')">
+        <i class="fa-solid fa-arrow-left"></i>
+    </button>
+
+    <!-- Carrusel de imágenes -->
+    <div class="carouselTour">
+        <div class="carousel-item" *ngFor="let tour of tours">
+            <img [src]="tour.img_1" alt="Food image">
+            <span><b>Destino:</b> {{tour.tour_destiny}}</span>
+            <span><b>Fecha:</b> {{tour.departure_date}}</span> 
+            <span><b>Actividad:</b> {{tour.type}}</span> 
+            <span><b>Operadora:</b> {{tour.enterprise_name}}</span>
+        </div>
+    </div>
+
+    <!-- Botón derecho -->
+    <button class="scroll-button right" (click)="scroll('rightTour')">
+        <i class="fa-solid fa-arrow-right"></i>
+    </button>
+</div>

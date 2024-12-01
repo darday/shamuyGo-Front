@@ -1,0 +1,20 @@
+<div class="carousel-container">
+    <!-- Botón izquierdo -->
+    <button class="scroll-button left" (click)="scroll('leftEnterprise')">
+        <i class="fa-solid fa-arrow-left"></i>
+    </button>
+
+    <!-- Carrusel de imágenes -->
+    <div class="carouselEnterprise">
+        <div class="carousel-item" *ngFor="let tour of tours">
+            <img [src]="tour.img_logo ? environment.apiUrlStorage + tour.img_logo : 'assets/img/ct2.png'"
+            alt="Imagen de la noticia" class="news-image">
+           
+        </div>
+    </div>
+
+    <!-- Botón derecho -->
+    <button class="scroll-button right" (click)="scroll('rightEnterprise')">
+        <i class="fa-solid fa-arrow-right"></i>
+    </button>
+</div>

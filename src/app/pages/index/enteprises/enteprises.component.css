@@ -1,0 +1,88 @@
+/* Contenedor principal */
+.carousel-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 10px;
+}
+
+/* Botones de desplazamiento */
+.scroll-button {
+  background-color: whitesmoke;
+  border: none;
+  border-radius: 40px;
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+  z-index: 2;
+  padding: 5px;
+}
+
+.scroll-button.left {
+  position: absolute;
+  left: 10px;
+}
+
+.scroll-button.right {
+  position: absolute;
+  right: 10px;
+}
+
+/* Carrusel */
+.carouselEnterprise {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px;
+}
+
+.carouselEnterprise::-webkit-scrollbar {
+  height: 6px;
+  display: none;
+  /* Hacer el scroll más delgado */
+}
+
+.carouselEnterprise::-webkit-scrollbar-thumb {
+  background: #888;
+  /* Color del scroll */
+  border-radius: 10px;
+  /* Bordes redondeados */
+}
+
+.carouselEnterprise::-webkit-scrollbar-thumb:hover {
+  background: #555;
+  /* Color del scroll al pasar el mouse */
+}
+
+/* Elementos del carrusel */
+.carousel-item {
+  flex: 0 0 12%;
+  /* Ocupa el 25% del ancho por imagen (4 imágenes visibles en escritorio) */
+  transition: transform 0.3s ease-in-out;
+  align-content: center;
+  cursor: pointer;
+
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Animación al pasar el mouse */
+.carousel-item:hover {
+  transform: scale(1.06);
+  /* Agranda la imagen */
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Agrega una sombra */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .carousel-item {
+    flex: 0 0 50%;
+    /* Ocupa el 50% del ancho por imagen (2 imágenes visibles en tabletas y teléfonos) */
+  }
+}

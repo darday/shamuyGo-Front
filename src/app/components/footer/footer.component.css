@@ -1,0 +1,74 @@
+/* Contenedor principal del footer */
+.footer-container {
+    
+    background-color: #4CAF50;
+    /* Fondo rojo */
+    color: white;
+    padding: 3%;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Contenedor de enlaces */
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 columnas en pantallas grandes */
+    gap: 20px;
+    /* Espacio entre columnas */
+    margin-bottom: 20px;
+    font-weight: bold;
+    
+}
+
+/* Columnas individuales */
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Estilo de los enlaces */
+.footer-link {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-link:hover {
+    color: #f0f0f0;
+}
+
+/* Línea divisoria y texto inferior */
+.footer-bottom hr {
+    border: none;
+    border-top: 1px solid white;
+    margin: 10px 0;
+}
+
+.footer-bottom p {
+    font-size: 12px;
+    margin: 0;
+}
+
+/* Responsividad */
+@media (max-width: 1024px) {
+    .footer-links {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columnas en pantallas medianas */
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-links {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columnas en pantallas pequeñas */
+        gap: 15px;
+    }
+
+    .footer-link {
+        font-size: 12px;
+        /* Reduce el tamaño de fuente */
+    }
+}
